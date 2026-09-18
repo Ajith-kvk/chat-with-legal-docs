@@ -89,12 +89,3 @@ Open http://localhost:5173. Both servers need to be running at the same time.
 - **LLM calls retry with exponential backoff** and fail gracefully with a
   clear message if the provider is rate-limited or temporarily unavailable,
   rather than crashing the request.
-
-## What I'd add next
-
-- Structure-aware chunking for legal text (split on numbered clauses
-  instead of a fixed character count, so a chunk never cuts an obligation
-  in half)
-- Conversation memory (the chat endpoint is currently stateless per question)
-- Streaming answers instead of waiting for the full response
-- Swap ChromaDB for Pinecone to compare a cloud-hosted vector DB
